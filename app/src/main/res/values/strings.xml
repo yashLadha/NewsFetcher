@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewsFetcher</string>
+    <string name="API_KEY">e1e2e737471c49a4b1e981f086f30c4c</string>
+    <string name="THE_HINDU">the-hindu</string>
+</resources>
