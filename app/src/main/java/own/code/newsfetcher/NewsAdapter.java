@@ -16,8 +16,6 @@ import java.util.ArrayList;
 
 public class NewsAdapter extends ArrayAdapter<NewsFeed> {
 
-    private TextView tvArticleName;
-
     public NewsAdapter(Context context, int resource, ArrayList<NewsFeed> objects) {
         super(context, resource, objects);
     }
@@ -30,7 +28,10 @@ public class NewsAdapter extends ArrayAdapter<NewsFeed> {
             v = LayoutInflater.from(getContext()).inflate(R.layout.news_feed, null);
         }
         NewsFeed temp = getItem(position);
-        tvArticleName = (TextView) v.findViewById(R.id.tvArticleTopic);
+        TextView tvArticleName = (TextView) v.findViewById(R.id.tvArticleTopic);
+        TextView tvArticleDescription = (TextView) v.findViewById(R.id.tvDescription);
+
+        tvArticleDescription.setText(temp.getDescription());
         tvArticleName.setText(temp.getTitle());
         return v;
     }
